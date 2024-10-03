@@ -1,0 +1,17 @@
+<launch>
+  <arg name="is_sim" default="true" />
+
+  <rosparam file="$(find rpr_arm)/config/trajectory_controllers.yaml" command="load" />
+  <rosparam file="$(find rpr_arm)/config/joint_state_controllers.yaml" command="load" /> 
+
+  <param name="robot_description"  textfile="$(find rpr_arm)/urdf/rpr_arm.urdf" />
+
+  <node pkg="controller_manager" type="spawner" name="controller_spawner" respawn="false" output="screen" ns="rpr_arm"
+      args="arm_controller gripper_controller joint_state_controller" />
+
+   <node name="robot_state_publisher" pkg="robot_state_publisher"  type="robot_state_publisher" respawn="true" output="screen">
+      <remap from="/joint_states" to="/rpr_arm/joint_states" /> 
+   </node>
+    
+
+</launch>

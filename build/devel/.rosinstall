@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/vros/catkin_ws/src/rpr_arm/build/devel/setup.sh

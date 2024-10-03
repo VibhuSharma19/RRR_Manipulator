@@ -1,0 +1,8 @@
+prefix=/home/vros/catkin_ws/src/rpr_arm/build/devel
+
+Name: rpr_arm
+Description: Description of rpr_arm
+Version: 1.0.0
+Cflags: -I/home/vros/catkin_ws/src/rpr_arm/build/devel/include
+Libs: -L${prefix}/lib 
+Requires: 
