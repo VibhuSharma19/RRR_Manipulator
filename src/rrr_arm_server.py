@@ -2,22 +2,22 @@
 
 import rospy
 import actionlib
-from rpr_arm.msg import RprTaskAction, RprTaskResult
+from rrr_arm.msg import RrrTaskAction, RrrTaskResult
 import sys
 import moveit_commander
 
 class TaskServer(object):
-    result_ = RprTaskResult()
+    result_ = RrrTaskResult()
     arm_goal_ = []
     gripper_goal_ = []
 
     def __init__(self, name):
         self.action_name_ = name
         moveit_commander.roscpp_initialize(sys.argv)
-        self.arm_move_group_ = moveit_commander.MoveGroupCommander('rpr_arm')
-        self.gripper_move_group_ = moveit_commander.MoveGroupCommander('rpr_gripper')
+        self.arm_move_group_ = moveit_commander.MoveGroupCommander('rrr_arm')
+        self.gripper_move_group_ = moveit_commander.MoveGroupCommander('rrr_gripper')
         
-        self.as_ = actionlib.SimpleActionServer(self.action_name_, RprTaskAction, execute_cb=self.execute_cb, auto_start=False)
+        self.as_ = actionlib.SimpleActionServer(self.action_name_, RrrTaskAction, execute_cb=self.execute_cb, auto_start=False)
         self.as_.start()
 
     def execute_cb(self, goal):

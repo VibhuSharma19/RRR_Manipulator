@@ -1,4 +1,4 @@
-rpr_arm:
+rrr_arm:
   arm_controller:
     type: "position_controllers/JointTrajectoryController"
     joints: ["joint_1", "joint_2", "joint_3"]

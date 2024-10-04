@@ -2,7 +2,7 @@
 
 import rospy
 import actionlib
-from rpr_arm.msg import FibonaciAction, FibonaciResult, FibonaciFeedback
+from rrr_arm.msg import FibonaciAction, FibonaciResult, FibonaciFeedback
 
 class FibonaciActionServer(object):
 

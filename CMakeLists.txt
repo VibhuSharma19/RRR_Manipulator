@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 
-project(rpr_arm)
+project(rrr_arm)
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
@@ -14,7 +14,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_action_files(
   FILES
   Fibonaci.action
-  RprTask.action
+  RrrTask.action
 )
 
 generate_messages(
@@ -24,11 +24,12 @@ generate_messages(
 )
 
 
+
 catkin_package()
 
 find_package(roslaunch)
 
-foreach(dir config launch meshes urdf)
+foreach(dir config launch meshes urdf action)
 	install(DIRECTORY ${dir}/
 		DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
 endforeach(dir)

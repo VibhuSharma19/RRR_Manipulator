@@ -12,10 +12,10 @@ from ask_sdk_core.dispatch_components import AbstractExceptionHandler
 import rospy
 import actionlib
 import threading
-from rpr_arm.msg import RprTaskAction, RprTaskGoal
+from rrr_arm.msg import RrrTaskAction, RrrTaskGoal
 
 threading.Thread(target=lambda: rospy.init_node('alexa_interface', disable_signals=True)).start()
-client = actionlib.SimpleActionClient("task_server", RprTaskAction)
+client = actionlib.SimpleActionClient("task_server", RrrTaskAction)
 
 app = Flask(__name__)
 
@@ -26,12 +26,12 @@ class LaunchRequestHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speech_text = "You have successfully connected to the rpr_arm"
+        speech_text = "You have successfully connected to the rrr_arm"
 
         handler_input.response_builder.speak(speech_text).set_card(
             SimpleCard("Hello World", speech_text)).set_should_end_session(
             False)
-        goal = RprTaskGoal(task_number=0)
+        goal = RrrTaskGoal(task_number=0)
         client.send_goal(goal)
 
         return handler_input.response_builder.response
@@ -49,7 +49,7 @@ class PickIntentHandler(AbstractRequestHandler):
         handler_input.response_builder.speak(speech_text).set_card(
             SimpleCard("Pick", speech_text)).set_should_end_session(
             True)
-        goal = RprTaskGoal(task_number=1)
+        goal = RrrTaskGoal(task_number=1)
         client.send_goal(goal)
 
         return handler_input.response_builder.response
@@ -67,7 +67,7 @@ class SleepIntentHandler(AbstractRequestHandler):
         handler_input.response_builder.speak(speech_text).set_card(
             SimpleCard("Sleep", speech_text)).set_should_end_session(
             True)
-        goal = RprTaskGoal(task_number=2)
+        goal = RrrTaskGoal(task_number=2)
         client.send_goal(goal)
 
         return handler_input.response_builder.response
@@ -84,7 +84,7 @@ class WakeIntentHandler(AbstractRequestHandler):
         handler_input.response_builder.speak(speech_text).set_card(
             SimpleCard("Wake", speech_text)).set_should_end_session(
             True)
-        goal = RprTaskGoal(task_number=0)
+        goal = RrrTaskGoal(task_number=0)
         client.send_goal(goal)
 
         return handler_input.response_builder.response

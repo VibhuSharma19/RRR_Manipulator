@@ -2,7 +2,7 @@
 
 import rospy
 import actionlib
-from rpr_arm.msg import FibonaciAction, FibonaciGoal
+from rrr_arm.msg import FibonaciAction, FibonaciGoal
 
 def fibonaci_client():
     client = actionlib.SimpleActionClient('Fibonaci', FibonaciAction)

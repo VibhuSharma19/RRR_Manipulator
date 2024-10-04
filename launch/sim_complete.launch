@@ -1,22 +1,22 @@
 <launch>
 
-    <arg name="model" default="$(find rpr_arm)/urdf/rpr_arm.urdf"/>
+    <arg name="model" default="$(find rrr_arm)/urdf/rrr_arm.urdf"/>
 
-    <include file="$(find rpr_arm)/launch/gazebo.launch">
+    <include file="$(find rrr_arm)/launch/gazebo.launch">
         
     </include>
 
-    <include file="$(find rpr_arm)/launch/controller.launch">
+    <include file="$(find rrr_arm)/launch/controller.launch">
         <arg name="is_sim" value="True"/>
     </include>
 
-    <include file="$(find rpr_moveit)/launch/move_group.launch">
+    <include file="$(find rrr_moveit)/launch/move_group.launch">
     </include>
 
-    <include file="$(find rpr_moveit)/launch/moveit_rviz.launch">
-        <arg name="rviz_config" value="$(find rpr_moveit)/launch/moveit.rviz"/>
+    <include file="$(find rrr_moveit)/launch/moveit_rviz.launch">
+        <arg name="rviz_config" value="$(find rrr_moveit)/launch/moveit.rviz"/>
     </include>
 
-    <include file="$(find rpr_arm)/launch/alexa_control.launch"/>
+    <include file="$(find rrr_arm)/launch/alexa_control.launch"/>
 
 </launch>
