@@ -53,7 +53,7 @@ The project has a main repository as [RRR_Manipulator](https://github.com/VibhuS
 * __MoveIt__
 * __Ngrok__ and __Amazon Alexa__
 
-[Ngrok](https://ngrok.com/download) is used for connecting to Alexa and its a free tool.  
+[Ngrok](https://ngrok.com/download) is a free tool that is used for cloud gateway for many cloud-based services and uses.  
 [Amazon Alexa](https://developer.amazon.com/en-US/alexa/alexa-skills-kit) can be assecced by creating an accunt in Amazon and refer to the tutorials.
 
 ### Installation and Build
@@ -120,16 +120,15 @@ $ rostopic pub /task_server/goal task_number:=(0-4)
 ```
 
 3. Manipulator control using Alexa Voice Command:
-
-Download [Ngrok](https://ngrok.com/download) and create an account than use the key to setup in your pc with `./ngrok authtoken "account-key"`
+`
 ```sh
 $ roslaunch rrr_arm sim_complete.launch
 
-# new terminal, go to ngrok folder
-$ ./ngrok http 5000
+# new terminal
+$ ngrok http 5000
 ```
 
-Paste the _http_ link of Ngrok to __Alexa Developer Console__ and command the manipulator with the custom based voice commands.
+Paste the _Forwarding_ link of Ngrok to __Alexa Developer Console__ and command the manipulator with the custom based voice commands.
 
 ## Project Visuals
 
@@ -158,7 +157,7 @@ https://github.com/user-attachments/assets/fb9dd42c-8fa0-4701-80c2-55c63b1a3d83
 
 ## Contributing
 
-Pull requests and issues are always welome. You can add additional new features bycreating branches and commit chnages. Please submit yoyr contribution and report any bugs or issues.
+Pull requests and issues are always welcome. You can add additional new features by creating branches and commit changes. Please submit your contribution and report any bugs or issues.
 
 
 1. Fork the Project
