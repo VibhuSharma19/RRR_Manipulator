@@ -65,7 +65,7 @@ $ cd ~/catkin_ws && rosdep install -r --ignore-src --from-paths src
 $ catkin_make
 ```
 
-2. Clone and build the repository seperatly for Gazebo and MoveIt package:
+2. Clone and build the repository separately for Gazebo and MoveIt package:
 ```sh
 $ cd ~/catkin_ws/src  
 $ git clone https://github.com/VibhuSharma19/RRR_Manipulator.git  
@@ -168,9 +168,8 @@ Pull requests and issues are always welome. You can add additional new features 
 5. Open a Pull Request
 
 ## Contact
-
 Vibhu Sharma  
-M.Tech (Gold Medalist) - Automation and Robotics  
+M.Tech (Gold Medalist :1st_place_medal:) - Automation and Robotics  
 [LinkedIn](www.linkedin.com/in/-vibhu-sharma) 
 [Github](https://github.com/VibhuSharma19)
 
