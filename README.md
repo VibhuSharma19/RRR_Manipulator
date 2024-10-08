@@ -34,7 +34,7 @@ Simulaton of 3-Dof RRR manipulator using ROS, Gazebo and MoveIt
 
 
 ## Overview
-This project simulates a custom build 3-dof serial manipulator of RRR (Revolute-Revolute-Revolute) configuration. The simulation and motion planing is achieved using Gazebo and Moveit respectively. This project also features additional integration of Alexa voice command control and custom-made task server control for the manipulator. This project is created as a learning from course [Robotics and ROS](https://www.udemy.com/course/robotics-and-ros-learn-by-doing-manipulators/?couponCode=KEEPLEARNING).
+This project simulates a custom build 3-dof serial manipulator of RRR (Revolute-Revolute-Revolute) configuration. The simulation and motion planing is achieved using Gazebo and Moveit respectively. This project also features additional integration of Alexa voice command control and custom-made task server control for the manipulator. 
 
 ### Features
 * __Gazebo Simulation__: The manipulator is simulated in gazebo using custom made controller and can be controlled using Joint State Gui as well as joint commands. The simulation can also be visualzied using Rviz.
